@@ -22,8 +22,6 @@ import org.apache.commons.lang3.builder.ToStringStyle
 import spock.lang.Specification
 import spock.lang.Title
 
-import static org.junit.jupiter.api.Assertions.assertNull
-
 @Title("org.apache.commons.lang3.AbstractLangTest")
 class AbstractLangSpec extends Specification {
 
@@ -35,7 +33,7 @@ class AbstractLangSpec extends Specification {
     }
 
     def validateNullToStringStyleRegistry() {
-        assertNull(ToStringStyle.getRegistry(), "Expected null, actual: " + ToStringStyle.getRegistry());
+        !ToStringStyle.getRegistry()
     }
 
 }

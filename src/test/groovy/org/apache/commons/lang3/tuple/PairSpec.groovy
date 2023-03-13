@@ -21,8 +21,6 @@ package org.apache.commons.lang3.tuple
 import org.apache.commons.lang3.AbstractLangSpec
 import spock.lang.Title
 
-import static org.junit.jupiter.api.Assertions.*
-
 @Title("org.apache.commons.lang3.tuple.PairTest")
 class PairSpec extends AbstractLangSpec {
 
@@ -171,7 +169,7 @@ class PairSpec extends AbstractLangSpec {
         given:
         Pair<String, String> pair = Pair.of("Key", "Value")
         expect:
-        assertEquals("(Key,Value)", pair.toString())
+        "(Key,Value)" == pair.toString()
     }
 
     def "testToStringCustom"() {
